@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sudents grading system</h1>
+
+    <div>
+        <input type="text" id= "name" placeholder="student name">
+        <input type="number" id="id" placeholder="student id">
+        <button onclick="addStudents()">add new student</button>
+    </div>
+    <hr>
+    <div>
+        <input type="text" id="task" placeholder="please enter the task">
+        <input type="number" id="taskId" placeholder="please enter student id">
+        <button onclick="addTask()">add new task</button>
+
+    </div>
+<hr>
+    <div>
+        <input type="text" id="taskName" placeholder="enter the task for grading">
+        <input type="text" id="gradeId" placeholder="enter student id">
+        <input type="number" id="grade" placeholder="enter grade">
+        <button onclick="assignGrades()">add grades</button>
+
+    </div>
+<hr>
+    <div>
+        <input type="text" id="passedOrNotId" placeholder="enter ID for check">
+        <button onclick="passedOrFailed()">check</button>
+    </div>
+<hr>
+
+</body>
+</html>
