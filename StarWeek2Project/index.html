@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Stud Grade Manager</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header>
+            <h1 id="pageheader"> Stud Grade Manager</h1>
+            <p class="welcome"> Welcome to my grade and task manager for university students</p>
+            <p class="welcome"> Below you can add info such as your name, grade and wether you completed tasks or not and you will be shown your results wether you passed or failed.</p>
+        </header>
+        <main>
+            <form>
+                <label for="studname" >Student name </label>
+                <input type="text" id="studname" name="studname"> <br>
+                <button type="button" id="studbutton"> Add Student</button><br><br>
+                <label for="grade"> Grade </label>
+                <input type="text" id="grade" name="grade"><br>
+                <button type="button" id="gradebutton"> Add grade</button>
+            </form>
+            
+            
+            <button onclick="renderStudents()"> Display passed students</button>
+            
+            <p id="listname"> </p>
+            <ul id="students">
+                
+            </ul>
+        </main>
+        <script src="script.js"> </script>
+    </body>
+</html>

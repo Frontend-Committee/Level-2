@@ -1,0 +1,20 @@
+html {
+    background-color: lightblue;
+}
+
+#pageheader {
+    display: flex;
+    justify-content: center;
+    color:green;
+}
+
+.welcome {
+    font-size: 30px;
+    color: red;
+}
+#studbutton{
+    margin:10px 180px;
+}
+#gradebutton{
+    margin:10px 140px;
+}
