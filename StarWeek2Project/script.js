@@ -23,6 +23,15 @@ studbutton.addEventListener("click" ,()=> {
 
 let gradebutton= document.getElementById("gradebutton");
 gradebutton.addEventListener("click",()=>{
+    const studentgrade=document.getElementById("grade").value;
+    if(studentgrade.length===0){
+        alert('Invalid input');
+        return;
+    }
+    if(students.length===0){
+        alert('No students added');
+        return;
+    }
     const chosenstudent=document.getElementById("stud").value;
     if(chosenstudent.length===0){
         alert('No student chosen');
@@ -41,13 +50,8 @@ gradebutton.addEventListener("click",()=>{
         alert('Student name was not added');
         return;
     }
-    if(students.length===0){
-        alert('No students added');
-        return;
-    }
-    const studentgrade=document.getElementById("grade").value;
     let studentgradenum= Number(studentgrade);
-    if(studentgradenum<0 || studentgradenum>100|| studentgrade.length==0){
+    if(studentgradenum<0 || studentgradenum>100){
         alert('Invalid input');
         return;
     }
