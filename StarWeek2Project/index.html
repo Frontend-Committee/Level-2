@@ -15,19 +15,28 @@
             <form>
                 <label for="studname" >Student name </label>
                 <input type="text" id="studname" name="studname"> <br>
-                <button type="button" id="studbutton"> Add Student</button><br><br>
-                <label for="grade"> Grade </label>
-                <input type="text" id="grade" name="grade"><br>
-                <button type="button" id="gradebutton"> Add grade</button>
+                <button type="button" id="studbutton"> Add Student</button><br>
+                <div id="gradessection"> 
+                    <h2> Grades</h2>
+                    <label for="stud"> Select student</label>
+                    <input type="text" list="inputstudents" id="stud" name="stud">
+                    <datalist id="inputstudents">
+
+                    </datalist>
+                    <label for="grade"> Grade </label>
+                    <input type="text" id="grade" name="grade"><br>
+                    <button type="button" id="gradebutton"> Add grade</button> 
+                </div>
             </form>
             
+            <div id="passed">
+                <button onclick="renderStudents()"> Display passed students</button>
             
-            <button onclick="renderStudents()"> Display passed students</button>
-            
-            <p id="listname"> </p>
-            <ul id="students">
+                <p id="listname"> </p>
+                <ul id="students">
                 
-            </ul>
+                </ul>
+            </div>
         </main>
         <script src="script.js"> </script>
     </body>

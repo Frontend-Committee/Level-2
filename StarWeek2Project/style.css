@@ -16,5 +16,16 @@ html {
     margin:10px 180px;
 }
 #gradebutton{
-    margin:10px 140px;
+    margin-left: 415px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+#gradessection {
+    background-color: brown;
+
+}
+#passed {
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
