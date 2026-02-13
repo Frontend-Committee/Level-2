@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #111;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.navBar h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+
+#cartContainer {
+    position: relative;
+    cursor: pointer;
+}
+
+#cartIcon {
+    width: 35px;
+    height: 35px;
+}
+
+
+#counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+#searchInput {
+    margin: 30px 20px 10px 40px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #111;
+}
+
+#searchButton {
+    padding: 10px 15px;
+    border: none;
+    background-color: #111;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #ff9800;
+}
+
+
+#productContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px 40px;
+}
+
+.productCard {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.productImage {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.productCard h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.productCard p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.addToCartBtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addToCartBtn:hover {
+    background-color: #444;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
