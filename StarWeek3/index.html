@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title> Bookmarker</title>
+        <link src="style.css" rel="stylesheet">
+    </head>
+    <body class="bg-purple-200">
+        <header>
+            <h1 class="flex justify-center text-[80px] text-red-500"> Bookmarker</h1>
+            <h2 class="flex justify-center text-[60px] text-yellow-500">Save your favorite websites</h2>
+        </header>
+        <main>
+            <section>
+            <form class="pt-[50px] pl-[10px]">
+                <label for="Bookmarkname">Enter the name of the website </label> <br> <br>
+                <input class="border-1 w-[400px] flex justify-center" placeholder="Website Name" type="text" id="Bookmarkname" name="Bookmarkname"> <br> <br>
+                <label for="URL" >Enter the URL of the website</label> <br> <br>
+                <input class="border-1 w-[400px]" placeholder="Website URL" type="text" id="URL" name="URL"> <br> <br>
+                <button class="ml-[272px] pl-[10px] pr-[10px] border-1 hover:bg-green-300" onclick="addBookmark()"  type="button" id="bookmarkbutton"> Add bookmark </button>
+            </form>
+            </section>
+            <section>
+                <table id="bookmarktable" class="mt-[50px]">
+                    <tr>
+                        <th class="p-[100px] pt-[20px] pb-[20px]">
+                            Index
+                        </th>
+                        <th class="p-[100px] pt-[20px] pb-[20px]">
+                            Website name
+                        </th>
+                        <th class="p-[100px] pt-[20px] pb-[20px]">
+                            Visit
+                        </th>
+                        <th class="p-[100px] pt-[20px] pb-[20px]">
+                            Remove
+                        </th>
+                    </tr>
+                </table>
+                <button class="p-[5px] ml-[875px] border-1 hover:bg-red-500" onclick="clearall()" >
+                    Clear all
+                </button>
+            </section>
+        </main>
+        <script src="script.js"> </script>
+    </body>
+</html>
