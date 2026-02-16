@@ -1,19 +1,20 @@
-let products = [
-    { id: 1, name: "shirt", price: 1000, image: "imagesIcons/shirt.jpg" },
-    { id: 2, name: "shoes", price: 599, image: "imagesIcons/shoes.jpg" },
-    { id: 3, name: "cap", price: 350, image: "imagesIcons/cap.jpg" },
-    { id: 4, name: "dress", price: 2500, image: "imagesIcons/dress.jpg" },
-    { id: 5, name: "pants", price: 790, image: "imagesIcons/pants.jpg" },
-    { id: 6, name: "accessories", price: 500, image: "imagesIcons/accessories.jpg" },
-];
+let allProducts = [];
+
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
+    .then(data => {
+        allProducts = data;
+        displayProducts(allProducts);
+    })
+    .catch(error => console.log("Error:", error));
 
 let cartCounter = 0;
 const cartCounterElement = document.getElementById("counter");
 const productsContainer = document.getElementById("productContainer");
 
 function addCartEvent(){
-    const addToCartButtons = document.querySelectorAll(".product button");
-    addToCartButtons.forEach(button => {
+    const buttons = document.querySelectorAll(".addToCartBtn");
+    buttons.forEach(button => {
         button.addEventListener("click", () => {
             cartCounter++;
             cartCounterElement.textContent = cartCounter;
@@ -25,12 +26,12 @@ function displayProducts(productsArray) {
     productsContainer.innerHTML = "";
     productsArray.forEach(product => {
         const productElement = document.createElement("div");
-        productElement.className = "product";
+        productElement.className = "productCard";
         productElement.innerHTML = `
-            <img class="imageContainer" src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
+            <img class="productImage" src="${product.image}" alt="${product.title}">
+            <h3>${product.title}</h3>
             <p>Price: $${product.price}</p>
-            <button onclick="addToCart(${product.id})">Add to Cart</button>
+            <button class="addToCartBtn">Add to Cart</button>
         `;
         productsContainer.appendChild(productElement);
     });
@@ -38,4 +39,10 @@ function displayProducts(productsArray) {
     addCartEvent();
 }
 
-displayProducts(products);
+searchButton.addEventListener("click", () => {
+    const searchValue = searchInput.value.toLowerCase();
+    const filteredProducts = allProducts.filter(product =>
+        product.title.toLowerCase().includes(searchValue)
+    );
+    displayProducts(filteredProducts);
+});
